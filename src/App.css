@@ -1,19 +1,104 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-self: center;
+  min-height: 100%;
+}
 
-background: rgba(255,255,255,1);
-background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
-background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
-
+.header {
+  background-color: #1C2B30;
+  color: #FF4600;
 }
 
 .odometer {
+  /* margin-top: 1em; */
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+
+  font-size: 3em; 
+}
+
+.buttonBar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  background-color: #BA9253;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.numbersBar {
+  display: flex;
+  /* flex-direction: column; */
   margin-top: 2em;
-  margin-left: 0.5em;
-  font-size: 2em; 
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  /* flex-direction: column; */
+  background-color: #BA9253;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+.snip1562 {
+  background-color: #FF4600;
+  border: none;
+  color: #1C2B30;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'BenchNine', Arial, sans-serif;
+  font-size: 1em;
+  font-size: 22px;
+  line-height: 1em;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.snip1562:before,
+.snip1562:after {
+  border-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+
+.snip1562:before {
+  border-color: #FF4600;
+  border-left-width: 2px;
+  border-top-width: 2px;
+  left: -5px;
+  top: -5px;
+}
+
+.snip1562:after {
+  border-bottom-width: 2px;
+  border-color: #FF4600;
+  border-right-width: 2px;
+  bottom: -5px;
+  right: -5px;
+}
+
+.snip1562:hover,
+.snip1562.hover {
+  background-color: #FF4600;
+}
+
+.snip1562:hover:before,
+.snip1562.hover:before,
+.snip1562:hover:after,
+.snip1562.hover:after {
+  height: 100%;
+  width: 100%;
 }

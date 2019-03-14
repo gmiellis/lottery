@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Odometer from "react-odometerjs";
 
-import "odometer/themes/odometer-theme-slot-machine.css";
+import "odometer/themes/odometer-theme-train-station.css";
+
 
 class App extends Component {
   constructor() {
@@ -52,32 +53,24 @@ class App extends Component {
     return (
 
       <div className="App">
-
-        <h1>Lottery Numbers<br/>Generator</h1>
-        <h3>Press<br/>the<br/>button</h3>
-
-        <button onClick={this.handleGenerateNumbers}>Generate Numbers</button>
-        <button onClick={this.handleReset}>Reset</button>
-        
-        <div>
-          {/* <p> */}
-            {/* {
-              this.state.arr.map((number, index) => {
-                return <span key={index}> {number} </span>
-              })
-            } */}
+        <div className="header">
+        <h1>Lottery Numbers Generator</h1>
+        </div>
+        <h4>Press the button</h4>
+        <div className="buttonBar">  
+          <button className="snip1562" onClick={this.handleGenerateNumbers}>Generate Numbers</button>
+          <button className="snip1562" onClick={this.handleReset}>Reset</button>
+        </div>
+        <div className="numbersBar">
             {
               this.state.arr.map((number, index) => {
-                return <span>
-                         <Odometer
+                return <Odometer
                             key={index}
                             format="dd" 
                             duration={1000} 
-                            value={number} />
-                      </span> 
+                            value={number} /> 
               })
             }
-          {/* </p> */}
         </div>
        
       </div>
